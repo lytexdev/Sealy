@@ -6,5 +6,4 @@ flask-sqlalchemy
 Flask-SocketIO
 python-socketio
 pymysql
-Flask-Bcrypt
 Flask-JWT-Extended
