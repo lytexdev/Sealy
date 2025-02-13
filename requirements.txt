@@ -1,5 +1,10 @@
 flask
+gunicorn
 python-dotenv
 flask-cors
-gunicorn
 flask-sqlalchemy
+Flask-SocketIO
+python-socketio
+pymysql
+Flask-Bcrypt
+Flask-JWT-Extended
