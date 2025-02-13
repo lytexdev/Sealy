@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script type="module" crossorigin src="{{ url_for('static', filename='assets/main.js') }}"></script>
+    <link rel="stylesheet" crossorigin href="{{ url_for('static', filename='assets/main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.svg') }}">
+    <title>Sealy</title>
+    <style>
+        @font-face {
+            font-family: 'Rubik', sans-serif;
+            src: url('{{ url_for("static", filename="assets/fonts/Rubik-VariableFont_wght.ttf") }}') format('truetype');
+        }
+
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
