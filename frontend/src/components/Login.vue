@@ -33,7 +33,8 @@ const handleLogin = async () => {
             password: password.value
         })
         localStorage.setItem('access_token', response.data.access_token)
-        router.push('/chat')
+        localStorage.setItem('user_id', response.data.user_id)
+        router.push('/users')
     } catch (error) {
         message.value = error.response?.data?.msg || 'Login failed'
     }

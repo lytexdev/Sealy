@@ -5,19 +5,21 @@ import { io } from "socket.io-client";
 import App from "./App.vue";
 import Register from "./components/Register.vue";
 import Login from "./components/Login.vue";
+import UserList from "./components/UserList.vue";
 import Chat from "./components/Chat.vue";
 
 axios.defaults.withCredentials = true;
 
-const socket = io("http://localhost:5000", {
+const socket = io(window.location.origin, {
   withCredentials: true,
 });
 
 const routes = [
-  { path: "/", redirect: "/login" },
+  { path: "/", redirect: "/users" },
   { path: "/register", component: Register },
   { path: "/login", component: Login },
-  { path: "/chat", component: Chat },
+  { path: "/users", component: UserList, name: "UserList" },
+  { path: "/chat/:recipientSlug", component: Chat, name: "Chat", props: true },
 ];
 
 const router = createRouter({
